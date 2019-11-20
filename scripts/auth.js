@@ -1,9 +1,9 @@
-document.addEventListener("onclick", function(){
-    first = document.querySelector('')
-    last = document.querySelector('')
-    email = document.querySelector('')
-    user = document.querySelector('')
-    password = document.querySelector('')
+document.addEventListener("onclick", signUp =() => {
+    first = document.querySelector('#firstName').value
+    last = document.querySelector('#lastName').value
+    email = document.querySelector('#email').value
+    user = document.querySelector('#userName').value
+    password = document.querySelector('#password').value
 
     let userInfo = {
         firstName: first,
@@ -13,9 +13,11 @@ document.addEventListener("onclick", function(){
         password
     }
 
-    sessionStorage.setItem('userInformation', userInfo);
+    console.log(userInfo)
+
+    sessionStorage.setItem('userInformation', JSON.stringify(userInfo));
+
+    let item = sessionStorage.getItem('userInformation')
+    console.log()
+    window.location = "user.html"
 })
-
-const signUp = () =>{
-
-}
