@@ -1,12 +1,21 @@
 document.addEventListener("onclick", function(){
-    document.querySelector()
-    document.querySelector('')
+    first = document.querySelector('')
+    last = document.querySelector('')
+    email = document.querySelector('')
+    user = document.querySelector('')
+    password = document.querySelector('')
+
+    let userInfo = {
+        firstName: first,
+        lastName: last,
+        email,
+        userName: user,
+        password
+    }
+
+    sessionStorage.setItem('userInformation', userInfo);
 })
 
 const signUp = () =>{
-
-}
-
-const logOff = () => {
 
 }
